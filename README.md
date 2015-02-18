@@ -35,7 +35,7 @@ php artisan queue:clear [connection] [queue]
 
 Where:
 
-* `[connection]` is the name of a connection in your config/queue.php
+* `[connection]` is the name of a connection in your `config/queue.php`
 * `[queue]` is the name of the queue / pipe you want to clear
 
 If you omit either argument, it will use your default driver and the default queue / pipe for that driver.
