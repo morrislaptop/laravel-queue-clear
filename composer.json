@@ -16,5 +16,12 @@
             "Morrislaptop\\LaravelQueueClear\\": "src/"
         }
     },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Morrislaptop\\LaravelQueueClear\\LaravelQueueClearServiceProvider"
+            ]
+        }
+    },
     "minimum-stability": "stable"
 }

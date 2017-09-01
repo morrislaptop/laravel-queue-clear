@@ -19,11 +19,13 @@ Begin by installing this package through Composer.
 }
 ```
 
-And then include the service provider within config/app.php.
+Laravel 5.5+ will use the auto-discovery function.
+
+If using Laravel 5.4 (or if you don't use auto-discovery) you will need to include the service provider in `config/app.php`.
 
 ```php
 'providers' => [
-    'Morrislaptop\LaravelQueueClear\LaravelQueueClearServiceProvider'
+    Morrislaptop\LaravelQueueClear\LaravelQueueClearServiceProvider::class,
 ];
 ```
 
