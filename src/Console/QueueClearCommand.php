@@ -67,7 +67,7 @@ class QueueClearCommand extends Command {
 	 *
 	 * @return void
 	 */
-	public function fire()
+	public function handle()
 	{
 		$connection = $this->argument('connection') ?: $this->config->get('queue.default');
 		$queue = $this->argument('queue') ?: $this->config->get('queue.connections.' . $connection  . '.queue');
