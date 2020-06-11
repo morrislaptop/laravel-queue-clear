@@ -28,7 +28,13 @@ class Clearer implements ClearerContract
         $connection = $this->manager->connection($connection);
 
         $count += $this->clearJobs($connection, $queue);
-        $count += $this->clearJobs($connection, $queue . ':reserved');
+        // does not always exist so ignore exceptions
+        try {
+            $count += $this->clearJobs($connection, $queue . ':reserved');
+        }
+        catch(\Exception $e) {
+            // silently ignore
+        }
         $count += $this->clearDelayedJobs($connection, $queue);
 
         return $count;
